@@ -6,12 +6,15 @@ from flask_ask import Ask, statement, question, session
 
 import eliza as ez
 
+import datetime as dt
+
 app = Flask(__name__)
 
 ask = Ask(app, "/")
 
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
-
+name = "Archit"
+f = open("Transcript: "+name+" "+dt.datetime.now()+".txt",)
 
 @ask.launch
 def begin_session():
