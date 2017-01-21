@@ -7,6 +7,7 @@ from flask_ask import Ask, statement, question, session
 import eliza as ez
 
 import datetime as dt
+import EmailClient as ec
 
 app = Flask(__name__)
 
@@ -25,17 +26,24 @@ def begin_session():
 
 @ask.intent("ResponseIntent",convert={'answer':str})
 def start_conversation(answer):
-	#f = open('templates.yaml','a')
 	session.attributes['answers'] = answer
 	f.write("You: "+answer+"\n")
 	eliza_response = ez.analyze(session.attributes['answers'])
-	#f.write("curr_response: " + eliza_response)
-	#f.close()
 	curr_response_msg = str(eliza_response)
 	f.write("Eliza: "+curr_response_msg+"\n")
 	return question(curr_response_msg)
 
-if __name__=='__main__':
-	app.run(debug=True)
+@ask.intent("EmailIntent")
+def email():
+	ec.send_email("Archit","archit.941@gmail.com")
+	return question("Email Sent To " + "archit.941@gmail.com" )
+
+@ask.intent("EndSession")
+def end_session():
 	f.write("\n\n")
 	f.close()
+	return question("If you want an Email of the Conversation, say Email!")
+
+if __name__=='__main__':
+	app.run(debug=True)
+	

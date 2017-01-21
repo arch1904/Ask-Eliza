@@ -11,3 +11,150 @@ fuck me.
 2017-01-21 12:39:35.688976
 
 
+2017-01-21 14:47:18.274899
+
+You: start Eliza
+Eliza: How does that make you feel?
+You: Good
+Eliza: good.
+You: I feel depressed
+Eliza: Good, tell me more about these feelings.
+You: I feel so lonely
+Eliza: Do you often feel so lonely?
+You: Death is the only option
+Eliza: I see.  And what does that tell you?
+You: that I should Die
+Eliza: I see.  And what does that tell you?
+You: poison is painless
+Eliza: How does that make you feel?
+You: Stop
+Eliza: How does that make you feel?
+
+
+2017-01-21 14:47:17.926925
+
+
+
+2017-01-21 14:51:39.410158
+
+
+
+2017-01-21 14:51:39.101943
+
+
+
+2017-01-21 14:52:14.450219
+
+
+
+2017-01-21 14:52:14.129839
+
+
+
+2017-01-21 14:53:29.521420
+
+
+
+2017-01-21 14:53:29.194300
+
+
+
+2017-01-21 14:58:30.215920
+
+Eliza: Welcome to Eliza, how are you feeling today?
+You: Im very happy today
+Eliza: Why do you tell me you're very happy today?
+You: I got married last night
+Eliza: I see.
+You: and She's already pregnant
+Eliza: Can you elaborate on that?
+You: We'll have a boy
+Eliza: we'll have a boy.
+2017-01-21 14:58:29.904415
+
+2017-01-21 15:03:12.864186
+
+Eliza: Welcome to Eliza, how are you feeling today?
+Eliza: Welcome to Eliza, how are you feeling today?
+
+
+2017-01-21 15:09:29.728945
+
+Eliza: Welcome to Eliza, how are you feeling today?
+
+
+2017-01-21 15:12:40.405972
+
+Eliza: Welcome to Eliza, how are you feeling today?
+
+
+2017-01-21 15:03:12.554843
+
+2017-01-21 15:16:18.642784
+
+Eliza: Welcome to Eliza, how are you feeling today?
+
+
+2017-01-21 15:16:18.337020
+
+2017-01-21 15:21:32.958148
+
+Eliza: Welcome to Eliza, how are you feeling today?
+2017-01-21 15:21:32.640913
+
+2017-01-21 15:23:33.293334
+
+Eliza: Welcome to Eliza, how are you feeling today?
+2017-01-21 15:23:32.995787
+
+2017-01-21 15:24:46.837025
+
+2017-01-21 15:24:47.179737
+
+Eliza: Welcome to Eliza, how are you feeling today?
+You: I am very happy
+Eliza: How long have you been very happy?
+You: I'm happy cuz I got married yesterday
+Eliza: Why do you think you're happy cuz you got married yesterday?
+You: because I love my wife
+Eliza: Let's change focus a bit... Tell me about your family.
+You: I have a wife
+Eliza: Now that you have a wife, what will you do next?
+You: she's pregnant and expecting a son
+Eliza: Why do you say that she's pregnant and expecting a son?
+You: cuz we got it checked out
+Eliza: Please tell me more.
+2017-01-21 15:27:28.872723
+
+Eliza: Welcome to Eliza, how are you feeling today?
+You: I am very happy
+Eliza: How long have you been very happy?
+You: I got married yesterday
+Eliza: How do you feel when you say that?
+
+
+2017-01-21 15:27:28.569929
+
+2017-01-21 15:29:11.065245
+
+Eliza: Welcome to Eliza, how are you feeling today?
+You: I am very happy today
+Eliza: How long have you been very happy today?
+You: Since the last month when I got married
+Eliza: How do you feel when you say that?
+
+
+2017-01-21 15:29:10.770338
+
+2017-01-21 15:31:25.286623
+
+Eliza: Welcome to Eliza, how are you feeling today?
+2017-01-21 15:31:24.963887
+
+2017-01-21 15:32:35.727967
+
+Eliza: Welcome to Eliza, how are you feeling today?
+You: I am very happy
+Eliza: How long have you been very happy?
+
+
