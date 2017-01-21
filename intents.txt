@@ -1,0 +1,21 @@
+{
+
+    "intents": [{
+
+        "intent": "ResponseIntent",
+
+        "slots": [{
+
+            "name": "answer",
+
+            "type": "AMAZON.STRING"
+
+        }]
+
+    }]
+
+}
+
+
+
+ResponseIntent {answer}
