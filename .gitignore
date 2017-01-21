@@ -1,2 +1,4 @@
-eliza.pyc
+*.pyc
 memory_game.py
+email_pass.txt
+
