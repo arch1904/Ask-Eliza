@@ -9,7 +9,7 @@ app = Flask(__name__)
 def get_query():
     if 'geography' in request.args:
         print request.args["geography"]
-        return "You typed in geography"
+        return jsonify(key="value")
 
 @app.errorhandler(404)
 def not_found_404(error):
