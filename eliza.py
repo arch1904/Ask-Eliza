@@ -231,7 +231,7 @@ def reflect(fragment):
     for i, token in enumerate(tokens):
         if token in reflections:
             tokens[i] = reflections[token]
-    return ' '.join(tokens)
+    return ' '.join(tokens) #User's Response
 
 
 def analyze(statement):
@@ -239,7 +239,7 @@ def analyze(statement):
         match = re.match(pattern, statement.rstrip(".!"))
         if match:
             response = random.choice(responses)
-            return response.format(*[reflect(g) for g in match.groups()])
+            return response.format(*[reflect(g) for g in match.groups()]) #Eliza's Response
 
 
 def main():
