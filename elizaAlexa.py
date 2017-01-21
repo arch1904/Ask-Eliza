@@ -14,7 +14,7 @@ ask = Ask(app, "/")
 
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 name = "Archit"
-f = open("Transcript: "+name+".txt",'a')
+f = open("Transcript_"+name+".txt",'a')
 f.write(str(dt.datetime.now())+"\n")
 
 @ask.launch
