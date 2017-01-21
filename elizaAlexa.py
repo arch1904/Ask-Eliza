@@ -11,7 +11,7 @@ app = Flask(__name__)
 ask = Ask(app, "/")
 
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
-f = open('templates.yaml','w')
+
 
 @ask.launch
 def begin_session():
@@ -20,10 +20,13 @@ def begin_session():
 
 @ask.intent("ResponseIntent",convert={'answer':str})
 def start_conversation(answer):
-	session.attributes['answers']=answer
+	#f = open('templates.yaml','a')
+	session.attributes['answers'] = answer
+	print answer
 	eliza_response = ez.analyze(session.attributes['answers'])
-	f.write("curr_response: "+eliza_response)
-	curr_response_msg = render_template('curr_response')
+	#f.write("curr_response: " + eliza_response)
+	#f.close()
+	curr_response_msg = str(eliza_response)
 	return question(curr_response_msg)
 
 if __name__=='__main__':
