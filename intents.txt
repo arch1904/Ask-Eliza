@@ -12,15 +12,9 @@
 
         }]
 
-    }]
+    }
+               ]
 
 }
 
-
-ResponseIntent I am {sample|answer}
-ResponseIntent I have been {sample|answer}
-ResponseIntent I feel {sample|answer}
-ResponseIntent I am doing {sample|answer}
-ResponseIntent I was {sample|answer}
-ResponseIntent I am feeling {sample|answer}
-ResponseIntent {sample|answer}
+ResponseIntent {end session|answer}
