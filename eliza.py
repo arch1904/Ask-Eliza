@@ -1,6 +1,9 @@
 import re
 import random
-
+def relations():
+  relatives = ["Family","Friends","Parents","Work"]
+  index = int(random.random()*len(relatives))
+  return str(relatives[index])
 
 reflections = {
     "am": "are",
@@ -54,9 +57,7 @@ psychobabble = [
 
     [r'Are you ([^\?]*)\??',
      ["Why does it matter whether I am {0}?",
-      "Would you prefer it if I were not {0}?",
-      "Perhaps you believe I am {0}.",
-      "I may be {0} -- what do you think?"]],
+      "Would you prefer it if I were not {0}?",]],
 
     [r'What (.*)',
      ["Why do you ask?",
@@ -75,8 +76,7 @@ psychobabble = [
       "If {0}, what else must be true?"]],
 
     [r'(.*) sorry (.*)',
-     ["There are many times when no apology is needed.",
-      "What feelings do you have when you apologize?"]],
+     ["There are many times when no apology is needed.",]],
 
     [r'Hello(.*)',
      ["Hello... I'm glad you could drop by today.",
@@ -146,7 +146,7 @@ psychobabble = [
       "When you feel {0}, what do you do?"]],
 
     [r'I have (.*)',
-     ["Why do you tell me that you've {0}?",
+     ["And what do you feel about the fact that you've {0}?",
       "Have you really {0}?",
       "Now that you have {0}, what will you do next?"]],
 
@@ -192,37 +192,37 @@ psychobabble = [
       "How did your father make you feel?",
       "How do you feel about your father?",
       "Does your relationship with your father relate to your feelings today?",
-      "Do you have trouble showing affection with your family?"]],
+      "Do you have trouble showing affection with your family?",
+      "Would you say your father was a good role model to you?"]],
 
     [r'(.*) child(.*)',
      ["Did you have close friends as a child?",
       "What is your favorite childhood memory?",
-      "Do you remember any dreams or nightmares from childhood?",
-      "Did the other children sometimes tease you?",
+      "Do you remember any dreams, nightmares, or fears from childhood?",
+      "Do you mind if I ask if you were bullied as a child?",
       "How do you think your childhood experiences relate to your feelings today?"]],
 
     [r'(.*)\?',
-     ["Why do you ask that?",
-      "Please consider whether you can answer your own question.",
+     ["Please consider whether you can answer your own question.",
       "Perhaps the answer lies within yourself?",
       "Why don't you tell me?"]],
 
     [r'quit',
-     ["Thank you for talking with me.",
+     ["I hope I could be of help",
       "Good-bye.",
-      "Thank you, that will be $150.  Have a good day!"]],
+      "Thank you, that will be $1500.  Have a good day!"]],
 
     [r'(.*)',
      ["Please tell me more.",
-      "Let's change focus a bit... Tell me about your family.",
+      "Let's change focus a bit... Tell me about your "+relations(),
       "Can you elaborate on that?",
-      "Why do you say that {0}?",
+      "Why do you believe that {0}?",
       "I see.",
       "Very interesting.",
       "{0}.",
-      "I see.  And what does that tell you?",
+      "I see.  And what do you infer from that?",
       "How does that make you feel?",
-      "How do you feel when you say that?"]]
+      "What triggered such a response?"]]
 ]
 
 

@@ -30,7 +30,7 @@ def begin_session():
 def start_conversation(answer):
 	session.attributes['answers'] = answer
 	f.write("You: "+answer+"\n")
-	if(answer.lower()=="send me an email"):
+	if(answer.lower()=="send me an email" or answer.lower()=="send me an e mail"):
 		f.write("\n\n")
 		f.close()
 		ec.send_email("Archit","archit.941@gmail.com")

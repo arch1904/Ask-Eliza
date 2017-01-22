@@ -1,0 +1,6 @@
+2017-01-21 23:54:12.555418
+Eliza: Welcome to Eliza, how are you feeling today?
+You: great how are you
+Eliza: How does that make you feel?
+You: do it again
+Eliza: How does that make you feel?

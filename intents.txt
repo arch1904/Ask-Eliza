@@ -1,3 +1,4 @@
+Intent Schema
 {
 
     "intents": [{
@@ -16,5 +17,5 @@
                ]
 
 }
-
-ResponseIntent {end session|answer}
+Sample Utterances
+ResponseIntent {Can You Please Repeat That|answer}
