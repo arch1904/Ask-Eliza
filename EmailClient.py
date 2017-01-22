@@ -1,7 +1,11 @@
 import smtplib
+import watson2 as w
 def send_email(name,email_id):
 	server = smtplib.SMTP('smtp.gmail.com', 587)
 	server.starttls()
+	f=open('archit.txt','r')
+	text=f.read()
+	needs,values = w.getProfile(text)
 	passw = open('email_pass.txt','r')
 	password = passw.readline().strip()
 	server.login("psychoelizalexa@gmail.com", password)
