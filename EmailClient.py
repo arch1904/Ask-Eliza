@@ -1,18 +1,40 @@
 import smtplib
 import watson2 as w
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
 def send_email(name,email_id):
 	server = smtplib.SMTP('smtp.gmail.com', 587)
 	server.starttls()
 	f=open('archit.txt','r')
 	text=f.read()
 	needs,values = w.getProfile(text)
+	f.close()
 	passw = open('email_pass.txt','r')
 	password = passw.readline().strip()
 	server.login("psychoelizalexa@gmail.com", password)
 	passw.close()
 	f = open("Transcript_"+name+".txt",'r')
-	f.seek(0,0)
-	msg="Subject:Your Session Today\n\n "+f.read()
+	text = f.read()
 	f.close()
-	server.sendmail("psychoelizalexa@gmail.com", email_id, msg)
+	msg = MIMEMultipart('alternative')
+	msg['Subject'] = "Your Session Today"
+	msg['From'] = "psychoelizalexa@gmail.com"
+	msg['To'] = email_id
+	needs_text = ""	
+	for need in needs:
+		needs_text+=need+": "+str(needs[need])+"<br>"
+	values_text = ""
+	for value in values:
+		values_text+=value+": "+str(values[value])+"<br>"
+
+	html = """\
+	<html><head>Complete Report For """ +name+"""</head><body>\
+	<H2> Conversation Transcript </H2>"""+text+"""\
+	<H3> Psychological Needs </H3>"""+needs_text+"""<H3> Values </H3>"""+values_text+"<br></p></body></html>"
+
+	part1=MIMEText(html,'html')
+	msg.attach(part1)
+	server.sendmail("psychoelizalexa@gmail.com", email_id, msg.as_string())
 	server.quit()
+

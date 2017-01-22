@@ -22,25 +22,23 @@ f = open("Transcript_"+name+".txt",'w')
 @ask.launch
 def begin_session():
 	start_msg = render_template('start')
-	f.write(str(dt.datetime.now())+"\n")
-	f.write("Eliza: "+start_msg+"\n")
+	f.write(str(dt.datetime.now())+"<br>")
+	f.write("Eliza: "+start_msg+"<br>")
 	session.attributes['answers']=""
 	return question(start_msg)
 
 @ask.intent("ResponseIntent",convert={'answer':str})
 def start_conversation(answer):
 	session.attributes['answers'] = answer
-	f.write("You: "+answer+"\n")
+	f.write("You: "+answer+"<br>")
 	if answer is None:
 		return question("I didn't quite get that, can you please repeat?")
 	if(answer.lower()=="send me an email" or answer.lower()=="send me an e mail"):
-		f.write("\n\n")
 		f.close()
 		ec.send_email("Archit","archit.941@gmail.com")
 		mgdb.register_last_session("Archit","Last email sent on"+str(dt.datetime.now()))
 		return statement("Email Sent, GoodBye!")
 	elif(answer.lower()=="end session" or answer.lower()=="end"):
-		f.write("\n\n")
 		f.close()
 		ec.send_email("Archit","archit.941@gmail.com")
 		mgdb.register_last_session("Archit","Last email sent on"+str(dt.datetime.now()))
@@ -48,7 +46,7 @@ def start_conversation(answer):
 	else:
 		eliza_response = ez.analyze(session.attributes['answers'])
 		curr_response_msg = str(eliza_response)
-		f.write("Eliza: "+curr_response_msg+"\n")
+		f.write("Eliza: "+curr_response_msg+"<br>")
 		return question(curr_response_msg)
 if __name__=='__main__':
 	app.run(debug=True)
