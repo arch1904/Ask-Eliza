@@ -30,6 +30,8 @@ def begin_session():
 def start_conversation(answer):
 	session.attributes['answers'] = answer
 	f.write("You: "+answer+"\n")
+	if answer is None:
+		return question("I didn't quite get that, can you please repeat?")
 	if(answer.lower()=="send me an email" or answer.lower()=="send me an e mail"):
 		f.write("\n\n")
 		f.close()

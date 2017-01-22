@@ -24,9 +24,7 @@ reflections = {
 
 psychobabble = [
     [r'I need (.*)',
-     ["Why do you need {0}?",
-      "Would it really help you to get {0}?",
-      "Are you sure you need {0}?"]],
+     ["Why is {0} so important to you?"]],
 
     [r'Why don\'?t you ([^\?]*)\??',
      ["Do you really think I don't {0}?",
@@ -34,30 +32,19 @@ psychobabble = [
       "Do you really want me to {0}?"]],
 
     [r'Why can\'?t I ([^\?]*)\??',
-     ["Do you think you should be able to {0}?",
-      "If you could {0}, what would you do?",
-      "I don't know -- why can't you {0}?",
-      "Have you really tried?"]],
+     ["If you could {0}, what would you do?"]],
 
     [r'I can\'?t (.*)',
-     ["How do you know you can't {0}?",
-      "Perhaps you could {0} if you tried.",
-      "What would it take for you to {0}?"]],
+     ["How do you know you can't {0}, to give up on something without trying is worse than trying and failing?"]],
 
     [r'I am (.*)',
-     ["Did you come to me because you are {0}?",
-      "How long have you been {0}?",
-      "How do you feel about being {0}?"]],
+     ["What is the reason for you being {0}?"]],
 
     [r'I\'?m (.*)',
-     ["How does being {0} make you feel?",
-      "Do you enjoy being {0}?",
-      "Why do you tell me you're {0}?",
-      "Why do you think you're {0}?"]],
+     ["What is the reason for you being {0}?"]],
 
     [r'Are you ([^\?]*)\??',
-     ["Why does it matter whether I am {0}?",
-      "Would you prefer it if I were not {0}?",]],
+     ["Would you prefer it if I were not {0}?",]],
 
     [r'What (.*)',
      ["Why do you ask?",
