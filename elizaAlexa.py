@@ -37,13 +37,13 @@ def start_conversation(answer):
 		f.write("\n\n")
 		f.close()
 		ec.send_email("Archit","archit.941@gmail.com")
-		mgdb.register_last_session("Archit","Last email sent on"+dt.datetime.utcnow())
+		mgdb.register_last_session("Archit","Last email sent on"+str(dt.datetime.now()))
 		return statement("Email Sent, GoodBye!")
 	elif(answer.lower()=="end session" or answer.lower()=="end"):
 		f.write("\n\n")
 		f.close()
 		ec.send_email("Archit","archit.941@gmail.com")
-		mgdb.register_last_session("Archit","Last email sent on"+dt.datetime.utcnow())
+		mgdb.register_last_session("Archit","Last email sent on"+str(dt.datetime.now()))
 		return statement("GoodBye, I have also sent you an email!")
 	else:
 		eliza_response = ez.analyze(session.attributes['answers'])

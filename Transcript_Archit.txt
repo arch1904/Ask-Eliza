@@ -1,6 +1,0 @@
-2017-01-22 03:25:35.690203
-Eliza: Welcome to Eliza, how are you feeling today?
-You: fifty
-Eliza: Can you elaborate on that?
-You: no door is is christmas
-Eliza: no door is is christmas.

@@ -1,5 +1,6 @@
 import pymongo
 from pymongo import MongoClient
+import datetime as dt
 
 
 client = MongoClient()
@@ -41,5 +42,10 @@ def register_last_session(name,comment):
 	for doc in post:
 		print doc
 
+def view_db(name):
+	post = db.posts.find({"name":name})
+	for doc in post:
+		print doc
 
-#add_user('Archit','archit.941@gmail.com','something')
+
+#print add_user('Archit','archit.941@gmail.com','something')
