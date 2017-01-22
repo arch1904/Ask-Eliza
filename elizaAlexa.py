@@ -5,6 +5,7 @@ from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session
 
 import eliza as ez
+import mongo as mgdb
 
 import datetime as dt
 import EmailClient as ec
@@ -34,11 +35,13 @@ def start_conversation(answer):
 		f.write("\n\n")
 		f.close()
 		ec.send_email("Archit","archit.941@gmail.com")
+		mgdb.register_last_session("Archit","Last email sent on"+dt.datetime.utcnow())
 		return statement("Email Sent, GoodBye!")
 	elif(answer.lower()=="end session" or answer.lower()=="end"):
 		f.write("\n\n")
 		f.close()
 		ec.send_email("Archit","archit.941@gmail.com")
+		mgdb.register_last_session("Archit","Last email sent on"+dt.datetime.utcnow())
 		return statement("GoodBye, I have also sent you an email!")
 	else:
 		eliza_response = ez.analyze(session.attributes['answers'])
@@ -49,4 +52,3 @@ if __name__=='__main__':
 	app.run(debug=True)
 	if not f.closed:
 		f.close()
-	
