@@ -1,1 +1,1 @@
-2017-01-22 07:31:24.838098<br>Eliza: Welcome to Eliza, how are you feeling today?<br>You: i feel great<br>Eliza: Can you elaborate on that?<br>You: you're dumb computer<br>Eliza: Do you feel threatened by computers?<br>You: no i feel sad by you<br>Eliza: no you feel sad by me.<br>You: end session<br>
+2017-01-22 10:23:19.631865<br>Eliza: Welcome to Eliza, how are you feeling today?<br>You: end session<br>
