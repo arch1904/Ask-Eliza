@@ -15,35 +15,38 @@ ask = Ask(app, "/")
 
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 name = "Archit"
-f = open("Transcript_"+name+".txt",'a')
-f.write(str(dt.datetime.now())+"\n\n")
+f = open("Transcript_"+name+".txt",'w')
+
 
 @ask.launch
 def begin_session():
 	start_msg = render_template('start')
+	f.write(str(dt.datetime.now())+"\n")
 	f.write("Eliza: "+start_msg+"\n")
+	session.attributes['answers']=""
 	return question(start_msg)
 
 @ask.intent("ResponseIntent",convert={'answer':str})
 def start_conversation(answer):
 	session.attributes['answers'] = answer
 	f.write("You: "+answer+"\n")
-	eliza_response = ez.analyze(session.attributes['answers'])
-	curr_response_msg = str(eliza_response)
-	f.write("Eliza: "+curr_response_msg+"\n")
-	return question(curr_response_msg)
-
-@ask.intent("EmailIntent")
-def email():
-	ec.send_email("Archit","archit.941@gmail.com")
-	return question("Email Sent To " + "archit.941@gmail.com" )
-
-@ask.intent("EndSession")
-def end_session():
-	f.write("\n\n")
-	f.close()
-	return question("If you want an Email of the Conversation, say Email!")
-
+	if(answer.lower()=="send me an email"):
+		f.write("\n\n")
+		f.close()
+		ec.send_email("Archit","archit.941@gmail.com")
+		return statement("Email Sent, GoodBye!")
+	elif(answer.lower()=="end session" or answer.lower()=="end"):
+		f.write("\n\n")
+		f.close()
+		ec.send_email("Archit","archit.941@gmail.com")
+		return statement("GoodBye, I have also sent you an email!")
+	else:
+		eliza_response = ez.analyze(session.attributes['answers'])
+		curr_response_msg = str(eliza_response)
+		f.write("Eliza: "+curr_response_msg+"\n")
+		return question(curr_response_msg)
 if __name__=='__main__':
 	app.run(debug=True)
+	if not f.closed:
+		f.close()
 	
